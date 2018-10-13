@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earthquakes</title>
+
+    <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.timeline@1.2.0/dist/leaflet.timeline.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+    
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Earthquakes:</h1>
+            <p>When And Where Do They Take Place?</p>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-2">
+                    <select id="selTime">
+                        <option value="">Select Time Frame</option>
+                        <option value="hour">Past Hour</option>
+                        <option value="day">Past Day</option>
+                        <option value="week">Past 7 Days</option>
+                        <option value="month">Past 30 Days</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select id="selType">
+                        <option value="">Select Magnitude Types</option>
+                        <option value="significant">Significant Earthquakes</option>
+                        <option value="4.5">M4.5+ Earthquakes</option>
+                        <option value="2.5">M2.5+ Earthquakes</option>
+                        <option value="1.0">M1.0+ Earthquakes</option>
+                        <option value="all">All Earthquakes</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <div class="row" style="height: 20px"></div>
+            
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+
+            <div class="row" style="height: 20px"></div>
+
+            <div class="row">
+                <p>Note: Default view is all earthquakes for the past 7 days</p>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <!-- Div of Map -->
+    <div id="map"></div>
+
+    <!-- JavaScript -->
+    <script src="logic.js"></script>
+    
+</body>
+</html>
